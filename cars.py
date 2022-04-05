@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import altair as alt
 import streamlit as st
-import psycopg2
+import psycopg2-binary as psycopg2
 
 #Connect to the heroku postgresql database
 connection=psycopg2.connect(user="yfxpgallicmvhs",
