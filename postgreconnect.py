@@ -11,11 +11,14 @@ def runquery(sql):
         #Create a cursor to perform database operations
         cursor=connection.cursor()
 
+        #Use the cursor to run an SQL. The exact SQL is defined in another python script.
         cursor.execute(sql)
+
+        #Fetch all records from the table using the SQL. 
 
         record = cursor.fetchall()
 
-        #Return the cursor to the calling program
+        #Return the fetched records to the calling program.
         return(record)
     except:
         print("Error while fetching data")
